@@ -40,7 +40,7 @@ nav{position:fixed;z-index:20;top:0;left:0;right:0;height:65px;display:flex;alig
 .music-btn{background:none;border:0;color:var(--gold2);font-size:22px;cursor:pointer}
 .hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:
  linear-gradient(90deg,rgba(5,2,5,.96) 0%,rgba(5,2,5,.72) 38%,rgba(5,2,5,.18) 75%,rgba(5,2,5,.75)),
- url("assets/photos/memory-1.jpg") center/cover no-repeat}
+ url("memory-1.jpg") center/cover no-repeat}
 .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,transparent,#050205aa 75%)}
 .hero-content{position:relative;z-index:2;margin-left:9%;max-width:620px;padding-top:50px}
 .hero h2{font:clamp(70px,10vw,135px)/.78 "Great Vibes",cursive;color:#f1ce78;font-weight:400;margin:24px 0 10px}
@@ -76,7 +76,7 @@ nav{position:fixed;z-index:20;top:0;left:0;right:0;height:65px;display:flex;alig
 .promise{min-height:75vh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 45%,#50103e,#160817 40%,#050205 75%)}
 .promise .big{font-size:76px;line-height:1.02;color:#f2d185;text-shadow:0 0 40px #c36b9d44}
 .promise .small{max-width:500px;color:#ad9b88;letter-spacing:1px}
-.final{min-height:75vh;display:grid;place-items:center;text-align:center;background:linear-gradient(#080308aa,#080308ee),url("assets/photos/memory-2.jpg") center/cover}
+.final{min-height:75vh;display:grid;place-items:center;text-align:center;background:linear-gradient(#080308aa,#080308ee),url("memory-2.jpg") center/cover}
 .final-inner{max-width:750px}
 .final h3{font:clamp(58px,8vw,100px)/.9 "Great Vibes";font-weight:400;color:#f2d185;margin:25px 0}
 .final h3 span{color:white}
@@ -123,3 +123,25 @@ footer{text-align:center;padding:25px;color:#756757;font-size:9px;letter-spacing
  .game-card h4{font-size:29px}
  .games-intro{font-size:17px}
 }
+
+
+/* One More Surprise modal */
+body.modal-open{overflow:hidden}
+.surprise-modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:22px;visibility:hidden;opacity:0;transition:opacity .35s ease,visibility .35s ease}
+.surprise-modal.show{visibility:visible;opacity:1}
+.surprise-backdrop{position:absolute;inset:0;background:rgba(4,1,7,.82);backdrop-filter:blur(8px)}
+.surprise-card{position:relative;width:min(650px,100%);max-height:90vh;overflow:auto;padding:55px 34px 38px;text-align:center;background:radial-gradient(circle at 50% 0,#351126 0,#130811 48%,#08040a 100%);border:1px solid #d7ad5a66;box-shadow:0 30px 100px #000;transform:translateY(20px) scale(.97);transition:transform .4s ease}
+.surprise-modal.show .surprise-card{transform:translateY(0) scale(1)}
+.close-surprise{position:absolute;right:15px;top:10px;width:38px;height:38px;border:0;background:transparent;color:#d8c9b7;font-size:30px;cursor:pointer}
+.surprise-heart{font-size:42px;color:#d7ad5a;margin-bottom:8px}
+.surprise-card h3{font:clamp(42px,8vw,68px) "Cormorant Garamond";line-height:.95;margin:15px 0 22px;color:#f4dfbc}
+.surprise-card h3 span{color:#f2c9d7}
+.surprise-card>p{max-width:520px;margin:0 auto 20px;color:#cbbcac;font:19px/1.7 "Cormorant Garamond"}
+.surprise-card .surprise-script{font:32px/1.25 "Great Vibes";color:#f0d28e;margin:25px auto}
+.surprise-card .ornament{color:#d7ad5a;margin:18px 0 25px}
+.surprise-card .gold-btn{margin-top:0}
+.surprise-letter{max-height:52vh;overflow-y:auto;text-align:left;padding:6px 10px 8px;margin:0 auto 8px;scrollbar-width:thin}
+.surprise-letter p{max-width:none!important;margin:0 0 18px!important;color:#d9cbbd!important;font:17px/1.72 "Cormorant Garamond"!important}
+.surprise-letter .surprise-script{text-align:center;color:#f0d28e!important;font:31px/1.25 "Great Vibes"!important;margin:24px auto!important}
+@media(max-width:600px){.surprise-letter{max-height:55vh;padding:4px 2px}.surprise-letter p{font-size:16px!important;line-height:1.65!important}.surprise-letter .surprise-script{font-size:27px!important}}
+@media(max-width:600px){.surprise-card{padding:45px 22px 30px}.surprise-card>p{font-size:17px}.surprise-card .surprise-script{font-size:27px}}

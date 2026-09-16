@@ -128,12 +128,30 @@ $("#revealLetter").addEventListener("click",()=>{
   result.scrollIntoView({behavior:"smooth",block:"center"});
 });
 
-// ---------------- Surprise ----------------
-$("#celebrateBtn").addEventListener("click", () => {
-  const toast = $("#toast");
-  toast.classList.add("show");
-  for(let i=0;i<80;i++) setTimeout(createHeart, i*15);
-  setTimeout(()=>toast.classList.remove("show"), 2800);
+// ---------------- One More Surprise ----------------
+const surpriseModal = $("#surpriseModal");
+const closeSurprise = $("#closeSurprise");
+
+function openSurprise(){
+  surpriseModal.classList.add("show");
+  surpriseModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+  for(let i=0;i<45;i++) setTimeout(createHeart, i*18);
+}
+
+function closeSurpriseModal(){
+  surpriseModal.classList.remove("show");
+  surpriseModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+}
+
+$("#celebrateBtn").addEventListener("click", openSurprise);
+closeSurprise.addEventListener("click", closeSurpriseModal);
+surpriseModal.querySelector(".surprise-backdrop").addEventListener("click", closeSurpriseModal);
+document.addEventListener("keydown", e => { if(e.key === "Escape") closeSurpriseModal(); });
+$("#surpriseMusic").addEventListener("click", async () => {
+  await startMusic();
+  closeSurpriseModal();
 });
 
 function createHeart(){
