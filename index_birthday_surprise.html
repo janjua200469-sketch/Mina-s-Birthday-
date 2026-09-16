@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safi's Mina ♡ Birthday Surprise</title>
+  <meta name="theme-color" content="#09030a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-heart">♡</div>
+    <p>For my Mina...</p>
+  </div>
+
+  <div id="intro" class="screen">
+    <div class="stars"></div>
+    <div class="intro-card">
+      <div class="tiny">A LITTLE SOMETHING FROM SAFI</div>
+      <div class="seal">♡</div>
+      <h1>For My<br><span>Mina</span></h1>
+      <p>There are some things words simply aren't enough for.</p>
+      <button id="openBtn" class="gold-btn">OPEN YOUR SURPRISE <span>→</span></button>
+      <div class="hint">Turn your sound on ♫</div>
+    </div>
+  </div>
+
+  <main id="site" class="hidden">
+    <nav>
+      <a class="brand" href="#home">SAFI'S MINA <span>♡</span></a>
+      <div class="navlinks">
+        <a href="#home">Home</a>
+        <a href="#letter">For You</a>
+        <a href="#gallery">Memories</a>
+        <a href="#games">Games</a>
+        <a href="#forever">Forever</a>
+      </div>
+      <button id="musicToggle" class="music-btn" aria-label="Toggle music">♫</button>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="eyebrow">HAPPIEST BIRTHDAY, MY LOVE</div>
+        <h2>Safi's <em>Mina</em></h2>
+        <div class="mrs">Mrs. Safi</div>
+        <p class="hero-line">Another year of your beauty,<br>and still, you make every moment feel special...</p>
+        <div class="ornament">— ♡ —</div>
+        <div class="player">
+          <div class="disc">♫</div>
+          <div>
+            <strong>Die With A Smile</strong>
+            <small>Lady Gaga &amp; Bruno Mars</small>
+          </div>
+          <button id="playBtn">▶</button>
+        </div>
+        <div id="musicStatus" class="music-status">Your song is ready — tap OPEN to start it.</div>
+      </div>
+      <div class="scroll">SCROLL TO DISCOVER <span>↓</span></div>
+    </section>
+
+    <section id="letter" class="letter-section section">
+      <div class="section-label">A FEW WORDS FOR YOU...</div>
+      <div class="letter-wrap">
+        <div class="letter">
+          <div class="wax">♡</div>
+          <p class="script">My Mina,</p>
+          <p>Won't say much because you are indescribable.</p>
+          <p>Only thing I would say is that...</p>
+          <p class="highlight">You are unbelievably beautiful, gorgeous and wonderful — inside and out.</p>
+          <p>Every moment with you feels special...</p>
+          <p>and I hope we keep making beautiful memories together.</p>
+          <p class="script sign">— Safi ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section section">
+      <div class="section-label">OUR LITTLE MOMENTS</div>
+      <h3>You + Me <span>=</span> Forever</h3>
+      <div class="gallery">
+        <figure><img src="memory-1.jpg" alt="Our memory 1"><figcaption>One of my favourite views.</figcaption></figure>
+        <figure><img src="memory-2.jpg" alt="Our memory 2"><figcaption>Same us. Different moment.</figcaption></figure>
+        <figure><img src="memory-3.jpg" alt="Our memory 3"><figcaption>Still one of my favourite memories.</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="games" class="games-section section">
+      <div class="section-label">JUST FOR US</div>
+      <h3>Little Games <span>♡</span></h3>
+      <p class="games-intro">Pick your answers, have fun, and see what your answers say about us.</p>
+
+      <div class="game-card">
+        <div class="game-number">GAME 01</div>
+        <h4>✨ This or That — Couple Edition</h4>
+        <p class="game-sub">Choose one from each pair.</p>
+        <div id="thisOrThat" class="choice-list"></div>
+        <button id="checkChoices" class="gold-btn">SAVE MY PICKS ✦</button>
+        <div id="choiceResult" class="game-result"></div>
+      </div>
+
+      <div class="game-card sentence-card">
+        <div class="game-number">GAME 02</div>
+        <h4>💗 Complete My Sentence</h4>
+        <p class="game-sub">Finish each line with whatever comes to your mind.</p>
+        <div id="sentenceGame"></div>
+        <button id="revealLetter" class="gold-btn">REVEAL MY LOVE LETTER ♡</button>
+        <div id="sentenceResult" class="game-result"></div>
+      </div>
+    </section>
+
+    <section class="promise section">
+      <div class="promise-glow"></div>
+      <p class="script big">You are my today,<br>tomorrow<br>and all my forever.</p>
+      <div class="ornament">♡</div>
+      <p class="small">No matter where life takes us, I want it to be filled with beautiful moments.</p>
+    </section>
+
+    <section id="forever" class="final section">
+      <div class="final-inner">
+        <div class="eyebrow">TO MY BEAUTIFUL MINA</div>
+        <h3>Happy Birthday,<br><span>My Everything.</span></h3>
+        <p>May every year ahead give us another reason to smile, laugh and make new memories.</p>
+        <button id="celebrateBtn" class="gold-btn">ONE MORE SURPRISE ✦</button>
+        <div id="birthdayReveal" class="birthday-reveal">
+          <div class="eyebrow">A LAST WORD FOR YOU</div>
+          <p>
+            Today is your birthday, and somehow the world feels strangely beautiful to me because on this very day, years ago, it received the soul that would one day become my favorite part of existence. I look at you and wonder what kind of tenderness the universe must have gathered to create those doe-like eyes, that devastating smile, that laugh which makes something inside me bloom, those little giggles and blushes that undo me more completely than I could ever confess. But if I were given a choice between your beauty and the soul that lives beneath it, I would choose your soul a thousand times—your patience, your softness, your fire, your peculiar little ways, the warmth of your personality, every imperfectly perfect detail that makes you you. Your face captivates my eyes, your body captivates my senses, but your soul has taken possession of places within me that beauty could never reach. And tonight, while everyone celebrates the day you were born, I find myself quietly celebrating the far greater miracle of having lived in a world where I could find you at all. If I could place a gift at your feet, I would give you every star that ever kept me company while I missed you, every rose that ever reminded me of your tenderness, every word I have ever struggled to find for the magnitude of my love. Yet even all of that would feel miserably small. So I give you the only thing I truly possess—my devotion, my tenderness, my endlessly wandering heart—and I promise to keep discovering new reasons to love you long after this birthday has become another beautiful memory. Happy birthday, my love. Today the world celebrates your existence; I simply find myself grateful that your existence became part of mine.
+          </p>
+          <div class="birthday-sign">— Safi ♡</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>Made with an unreasonable amount of love — <span>♡</span> — Safi</footer>
+  </main>
+
+  <!-- Put your own legally obtained copy of the song in the same folder and keep this filename. -->
+  <audio id="music" loop preload="auto">
+    <source src="die-with-a-smile.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="toast" class="toast">A little surprise just for you. ♡</div>
+
+  <script>
+    document.getElementById("celebrateBtn").addEventListener("click", function () {
+      document.getElementById("birthdayReveal").classList.add("show");
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
