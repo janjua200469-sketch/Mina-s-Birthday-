@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safi's Mina ♡ Mrs. Safi</title>
+  <meta name="theme-color" content="#09030a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-heart">♡</div>
+    <p>For my Mina...</p>
+  </div>
+
+  <div id="intro" class="screen">
+    <div class="stars"></div>
+    <div class="intro-card">
+      <div class="tiny">A LITTLE SOMETHING FROM SAFI</div>
+      <div class="seal">♡</div>
+      <h1>For My<br><span>Mina</span></h1>
+      <p>There are some things words simply aren't enough for.</p>
+      <button id="openBtn" class="gold-btn">OPEN YOUR SURPRISE <span>→</span></button>
+      <div class="hint">Turn your sound on ♫</div>
+    </div>
+  </div>
+
+  <main id="site" class="hidden">
+    <nav>
+      <a class="brand" href="#home">SAFI'S MINA <span>♡</span></a>
+      <div class="navlinks">
+        <a href="#home">Home</a>
+        <a href="#letter">For You</a>
+        <a href="#gallery">Memories</a>
+        <a href="#forever">Forever</a>
+      </div>
+      <button id="musicToggle" class="music-btn" aria-label="Toggle music">♫</button>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="eyebrow">HAPPIEST BIRTHDAY, MY LOVE</div>
+        <h2>Safi's <em>Mina</em></h2>
+        <div class="mrs">Mrs. Safi</div>
+        <p class="hero-line">Another year of your beauty,<br>and still, you take my breath away...</p>
+        <div class="ornament">— ♡ —</div>
+        <div class="player">
+          <div class="disc">♫</div>
+          <div>
+            <strong>Die With A Smile</strong>
+            <small>Bruno Mars & Lady Gaga</small>
+          </div>
+          <button id="playBtn">▶</button>
+        </div>
+      </div>
+      <div class="scroll">SCROLL TO DISCOVER <span>↓</span></div>
+    </section>
+
+    <section id="letter" class="letter-section section">
+      <div class="section-label">A FEW WORDS FOR YOU...</div>
+      <div class="letter-wrap">
+        <div class="letter">
+          <div class="wax">♡</div>
+          <p class="script">My Mina,</p>
+          <p>Won't say much because you are indescribable.</p>
+          <p>Only thing I would say is that...</p>
+          <p class="highlight">You are unbelievably beautiful, gorgeous, seductive and ecstatic — from inside and outside.</p>
+          <p>Living with you is nothing less than bliss...</p>
+          <p>and I can't live without you.</p>
+          <p class="script sign">— Safi ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section section">
+      <div class="section-label">OUR LITTLE MOMENTS</div>
+      <h3>You + Me <span>=</span> Forever</h3>
+      <div class="gallery">
+        <figure><img src="assets/photos/memory-1.jpg" alt="Our memory 1"><figcaption>One of my favourite views.</figcaption></figure>
+        <figure><img src="assets/photos/memory-2.jpg" alt="Our memory 2"><figcaption>Same us. Different moment.</figcaption></figure>
+        <figure><img src="assets/photos/memory-3.jpg" alt="Our memory 3"><figcaption>Still my favourite person.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="promise section">
+      <div class="promise-glow"></div>
+      <p class="script big">You are my today,<br>tomorrow<br>and all my forever.</p>
+      <div class="ornament">♡</div>
+      <p class="small">No matter where life takes us, I want it to be with you.</p>
+    </section>
+
+    <section id="forever" class="final section">
+      <div class="final-inner">
+        <div class="eyebrow">TO MY BEAUTIFUL MRS. SAFI</div>
+        <h3>Happy Birthday,<br><span>My Everything.</span></h3>
+        <p>May every year ahead give us another reason to fall in love all over again.</p>
+        <button id="celebrateBtn" class="gold-btn">ONE MORE SURPRISE ✦</button>
+      </div>
+    </section>
+
+    <footer>Made with an unreasonable amount of love — <span>♡</span> — Safi</footer>
+  </main>
+
+  <audio id="music" loop preload="none">
+    <source src="assets/audio/die-with-a-smile.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="toast" class="toast">I love you, Mina. ♡</div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+:root{
+  --black:#070307;
+  --deep:#11050d;
+  --wine:#3c071d;
+  --red:#9e1735;
+  --purple:#5d1a70;
+  --gold:#d7ad5a;
+  --gold2:#f5d78a;
+  --cream:#f4e8d0;
+  --muted:#b9a993;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--cream);font-family:Montserrat,Arial,sans-serif;font-weight:300}
+a{color:inherit;text-decoration:none}
+.hidden{display:none!important}
+#loader{position:fixed;inset:0;background:#050205;z-index:100;display:grid;place-content:center;text-align:center;transition:opacity .8s,visibility .8s}
+#loader.gone{opacity:0;visibility:hidden}
+.loader-heart{font:80px "Great Vibes",cursive;color:var(--gold);animation:pulse 1.2s infinite}
+#loader p{letter-spacing:5px;text-transform:uppercase;font-size:10px;color:#b99a67}
+.screen{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;background:
+ radial-gradient(circle at 20% 20%,#4c0c27 0,transparent 28%),
+ radial-gradient(circle at 80% 70%,#3e1557 0,transparent 32%),
+ linear-gradient(135deg,#050205,#15050e 55%,#08030a)}
+.stars{position:absolute;inset:0;background-image:radial-gradient(#e9c77b 1px,transparent 1px);background-size:90px 90px;opacity:.16}
+.intro-card{width:min(570px,90vw);padding:70px 35px;text-align:center;border:1px solid rgba(215,173,90,.35);background:rgba(10,3,9,.58);backdrop-filter:blur(12px);box-shadow:0 0 80px #7c123533}
+.tiny,.eyebrow,.section-label{letter-spacing:4px;font-size:10px;color:var(--gold);font-weight:500}
+.seal{font-size:32px;color:var(--gold);margin:28px}
+h1{font:76px/0.85 "Great Vibes",cursive;font-weight:400;margin:0;color:#f3dfae}
+h1 span{color:#fff}
+.intro-card p{max-width:390px;margin:30px auto 35px;color:#c7b9a7;line-height:1.8}
+.gold-btn{border:1px solid var(--gold);background:linear-gradient(100deg,#a66e20,#f1cf78,#9d671e);color:#160b06;padding:15px 24px;font-size:10px;letter-spacing:2px;font-weight:600;cursor:pointer;transition:.3s}
+.gold-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px #d7ad5a33}
+.hint{margin-top:22px;font-size:9px;color:#806d58;letter-spacing:2px}
+nav{position:fixed;z-index:20;top:0;left:0;right:0;height:65px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:linear-gradient(#050205dd,transparent);border-bottom:1px solid #d7ad5a22}
+.brand{font-family:"Cormorant Garamond";letter-spacing:3px;font-size:12px;color:var(--gold2)}
+.brand span{font-size:18px;margin-left:5px}
+.navlinks{display:flex;gap:34px;text-transform:uppercase;font-size:9px;letter-spacing:2px;color:#c8bba8}
+.navlinks a:hover{color:var(--gold2)}
+.music-btn{background:none;border:0;color:var(--gold2);font-size:22px;cursor:pointer}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:
+ linear-gradient(90deg,rgba(5,2,5,.96) 0%,rgba(5,2,5,.72) 38%,rgba(5,2,5,.18) 75%,rgba(5,2,5,.75)),
+ url("assets/photos/memory-1.jpg") center/cover no-repeat}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,transparent,#050205aa 75%)}
+.hero-content{position:relative;z-index:2;margin-left:9%;max-width:620px;padding-top:50px}
+.hero h2{font:clamp(70px,10vw,135px)/.78 "Great Vibes",cursive;color:#f1ce78;font-weight:400;margin:24px 0 10px}
+.hero h2 em{font-style:normal;color:#fff}
+.mrs{font:38px "Cormorant Garamond";letter-spacing:8px;text-transform:uppercase;color:#f5ead2}
+.hero-line{font-family:"Cormorant Garamond";font-size:21px;line-height:1.4;color:#e3d3bb}
+.ornament{color:var(--gold);letter-spacing:8px;margin:24px 0}
+.player{width:min(440px,90vw);display:flex;align-items:center;gap:14px;border:1px solid #d7ad5a55;border-radius:50px;background:#09050bd9;padding:9px 12px}
+.disc{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#e6c879 0 10%,#151016 11% 25%,#c08a36 26% 30%,#151016 31%);color:#fff}
+.player strong{display:block;font:15px "Cormorant Garamond";letter-spacing:1px}
+.player small{color:#9d8f7c;font-size:9px;letter-spacing:1px}
+.player button{margin-left:auto;border:1px solid #d7ad5a77;background:none;color:var(--gold2);width:35px;height:35px;border-radius:50%;cursor:pointer}
+.scroll{position:absolute;z-index:3;bottom:25px;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:3px;color:#9b8d7a}
+.scroll span{color:var(--gold);font-size:16px;margin-left:10px}
+.section{position:relative;padding:120px 8%;overflow:hidden}
+.letter-section{background:linear-gradient(120deg,#0b0409,#1b0711 50%,#08030a)}
+.letter-wrap{max-width:850px;margin:45px auto 0}
+.letter{position:relative;background:linear-gradient(135deg,#efe0c1,#d8c19b);color:#39281e;padding:70px 12%;font-family:"Cormorant Garamond";font-size:23px;line-height:1.45;box-shadow:0 30px 80px #0009;transform:rotate(-1deg)}
+.wax{position:absolute;top:-20px;right:45px;width:65px;height:65px;border-radius:50%;background:#69112b;color:#e6bb61;display:grid;place-items:center;font-size:28px;box-shadow:0 6px 15px #0005}
+.letter .script{font:38px "Great Vibes";color:#7b1531}
+.letter .highlight{font-weight:600;color:#68142d}
+.sign{text-align:right;margin-bottom:0}
+.gallery-section{background:#07030a}
+.gallery-section h3{text-align:center;font:48px "Cormorant Garamond";margin:15px 0 55px}.gallery-section h3 span{color:var(--gold)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1050px;margin:auto}
+.gallery figure{margin:0;background:#10070e;padding:10px;border:1px solid #d7ad5a55;box-shadow:0 20px 40px #0008;transition:.5s}
+.gallery figure:nth-child(2){transform:translateY(35px) rotate(2deg)}
+.gallery figure:nth-child(1){transform:rotate(-3deg)}
+.gallery figure:nth-child(3){transform:rotate(3deg)}
+.gallery figure:hover{transform:translateY(-10px) rotate(0)}
+.gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.gallery figcaption{font:22px "Great Vibes";color:#e0bc70;padding:14px 5px 9px;text-align:center}
+.promise{min-height:75vh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 45%,#50103e,#160817 40%,#050205 75%)}
+.promise .big{font-size:76px;line-height:1.02;color:#f2d185;text-shadow:0 0 40px #c36b9d44}
+.promise .small{max-width:500px;color:#ad9b88;letter-spacing:1px}
+.final{min-height:75vh;display:grid;place-items:center;text-align:center;background:linear-gradient(#080308aa,#080308ee),url("assets/photos/memory-2.jpg") center/cover}
+.final-inner{max-width:750px}
+.final h3{font:clamp(58px,8vw,100px)/.9 "Great Vibes";font-weight:400;color:#f2d185;margin:25px 0}
+.final h3 span{color:white}
+.final p{font:20px "Cormorant Garamond";color:#d3c1aa;max-width:540px;margin:0 auto 30px}
+footer{text-align:center;padding:25px;color:#756757;font-size:9px;letter-spacing:2px;background:#050205}footer span{color:var(--gold)}
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,30px);opacity:0;z-index:50;background:#0d0710;border:1px solid #d7ad5a66;color:#f2d185;padding:13px 22px;border-radius:30px;font:18px "Great Vibes";transition:.4s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes pulse{50%{transform:scale(1.18);text-shadow:0 0 30px #d7ad5a}}
+@media(max-width:700px){
+ nav{height:58px;padding:0 18px}.navlinks{display:none}.hero{background-position:58% center}.hero-content{margin:0 auto;padding:80px 25px 50px;text-align:center}.hero h2{font-size:76px}.mrs{font-size:25px}.hero-line{font-size:18px}.player{margin:auto}.section{padding:85px 20px}.letter{padding:60px 28px;font-size:20px}.gallery{grid-template-columns:1fr;max-width:390px}.gallery figure:nth-child(n){transform:none}.gallery figure+figure{margin-top:10px}.promise .big{font-size:58px}.intro-card{padding:55px 22px}h1{font-size:65px}
+}
