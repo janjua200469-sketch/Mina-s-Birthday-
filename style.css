@@ -87,3 +87,39 @@ footer{text-align:center;padding:25px;color:#756757;font-size:9px;letter-spacing
 @media(max-width:700px){
  nav{height:58px;padding:0 18px}.navlinks{display:none}.hero{background-position:58% center}.hero-content{margin:0 auto;padding:80px 25px 50px;text-align:center}.hero h2{font-size:76px}.mrs{font-size:25px}.hero-line{font-size:18px}.player{margin:auto}.section{padding:85px 20px}.letter{padding:60px 28px;font-size:20px}.gallery{grid-template-columns:1fr;max-width:390px}.gallery figure:nth-child(n){transform:none}.gallery figure+figure{margin-top:10px}.promise .big{font-size:58px}.intro-card{padding:55px 22px}h1{font-size:65px}
 }
+
+.music-status{margin-top:10px;color:#a99a88;font-size:9px;letter-spacing:1px}
+.games-section{background:
+  radial-gradient(circle at 15% 20%,#3b0a23 0,transparent 30%),
+  radial-gradient(circle at 85% 80%,#30123f 0,transparent 32%),
+  #07030a}
+.games-section h3{text-align:center;font:clamp(45px,7vw,70px) "Cormorant Garamond";margin:15px 0 10px}
+.games-section h3 span{color:var(--gold)}
+.games-intro{text-align:center;color:#b9a993;max-width:600px;margin:0 auto 50px;font:18px "Cormorant Garamond"}
+.game-card{max-width:850px;margin:0 auto 45px;padding:38px;border:1px solid #d7ad5a44;background:rgba(15,5,14,.72);box-shadow:0 25px 70px #0008}
+.game-number{font-size:9px;letter-spacing:4px;color:var(--gold);margin-bottom:10px}
+.game-card h4{font:34px "Cormorant Garamond";margin:0 0 5px;color:#f2d185}
+.game-sub{color:#9f907e;margin:0 0 28px;font-size:13px}
+.choice-row{padding:18px 0;border-bottom:1px solid #d7ad5a1c}
+.choice-question{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#b8aa98;margin-bottom:10px}
+.choice-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.choice-buttons button{flex:1;min-width:180px;padding:13px 15px;border:1px solid #d7ad5a40;border-radius:30px;background:#0b060d;color:#eadfcf;cursor:pointer;transition:.25s;font-family:Montserrat}
+.choice-buttons button:hover,.choice-buttons button.selected{border-color:var(--gold);background:#2a1020;color:#f5d78a;transform:translateY(-2px)}
+.game-card>.gold-btn{margin-top:25px}
+.game-result{display:none;margin-top:22px;padding:20px;border:1px solid #d7ad5a33;background:#0a050b;color:#d8c9b7;line-height:1.7}
+.game-result.show{display:block}
+.sentence-item{display:block;margin:0 0 18px;color:#eadfcf;font:19px "Cormorant Garamond";line-height:1.35}
+.sentence-item input{display:block;width:100%;margin-top:8px;padding:13px 15px;border:1px solid #d7ad5a33;background:#09050b;color:#fff;border-radius:8px;outline:none;font:14px Montserrat}
+.sentence-item input:focus{border-color:var(--gold)}
+.sentence-item input::placeholder{color:#706456}
+.love-letter-result{background:linear-gradient(135deg,#efe0c1,#d8c19b);color:#39281e;padding:35px 28px;box-shadow:0 15px 40px #0006}
+.love-letter-result p{margin:0 0 18px}
+.result-title{font-size:38px;color:#7b1531;margin-bottom:20px}
+.love-letter-result .sign{text-align:right;font-size:30px;color:#7b1531}
+@media(max-width:700px){
+ .game-card{padding:25px 18px}
+ .choice-buttons{display:grid;grid-template-columns:1fr}
+ .choice-buttons button{min-width:0}
+ .game-card h4{font-size:29px}
+ .games-intro{font-size:17px}
+}
