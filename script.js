@@ -172,3 +172,74 @@ function createHeart(){
   });
   setTimeout(()=>h.remove(),2600);
 }
+
+
+/* MINA FIXED SURPRISE JS START */
+(function () {
+  function initMinaSurprise() {
+    var modal = document.getElementById('surpriseModal');
+    if (!modal) return;
+
+    var audio = document.querySelector('audio');
+    var openButton = null;
+
+    // Find the actual "ONE MORE SURPRISE" button/link without depending on
+    // its original class or id.
+    var candidates = document.querySelectorAll('button, a, [role="button"]');
+    candidates.forEach(function (el) {
+      var text = (el.textContent || '').trim().replace(/\s+/g, ' ').toUpperCase();
+      if (text.indexOf('ONE MORE SURPRISE') !== -1) openButton = el;
+    });
+
+    function openSurprise(e) {
+      if (e) e.preventDefault();
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('surprise-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSurprise(e) {
+      if (e) e.preventDefault();
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('surprise-open');
+      document.body.style.overflow = '';
+    }
+
+    if (openButton) {
+      openButton.addEventListener('click', openSurprise);
+    }
+
+    modal.querySelectorAll('[data-close-surprise]').forEach(function (el) {
+      el.addEventListener('click', closeSurprise);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) closeSurprise(e);
+    });
+
+    var songButton = document.getElementById('playOurSong');
+    if (songButton) {
+      songButton.addEventListener('click', function () {
+        if (!audio) {
+          audio = document.createElement('audio');
+          audio.src = 'die-with-a-smile.mp3';
+          audio.preload = 'auto';
+          document.body.appendChild(audio);
+        }
+        audio.play().catch(function () {
+          // Browser autoplay/user-gesture restrictions are handled silently.
+        });
+        songButton.textContent = '♫ PLAYING OUR SONG';
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMinaSurprise);
+  } else {
+    initMinaSurprise();
+  }
+})();
+ /* MINA FIXED SURPRISE JS END */
